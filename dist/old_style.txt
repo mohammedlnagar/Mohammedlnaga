@@ -1,0 +1,223 @@
+.quote_image{
+    background: gray url("code.jpg") repeat 0 0;
+    background-size: cover;
+    height: 450px;
+    width:90%;
+    margin-top:150px;
+    margin-bottom:150px;
+    position: relative;
+    left: 5%;
+    right: 5%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:0px solid;
+    border-radius: 20px;
+    box-shadow:
+    1px 5px 200px black,     /* R and B*/
+    -1px -5px 200px black,     /* L and U*/
+    1px -5px 200px black,     /* R and U*/
+    -1px 5px 200px black;    /* L and B*/
+    box-sizing: border-box;
+    animation: slide 20s linear infinite;
+}
+@keyframes slide {
+    0% { background-position: 0 0;}
+    25%{ background-position: -200px -300px; }
+    50%{ background-position: -300px -400px; }
+    75%{ background-position: -500px -600px; }    
+    100%{ background-position: -700 -700; }
+}
+.quote_image p{
+    background-color: lightblue;
+    color: black;
+    font-family: "Sniglet";
+    font-weight: bold;
+    font-size: 32px;
+    mix-blend-mode: screen;
+    border:0px solid;
+    border-radius: 20px;
+    margin:10px;
+}
+.quote_image .down p{
+    font-size: 60px;
+    margin:10px;
+}
+.quote_image .up{
+    width:100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.quote_image .down{
+    width:100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.down .firstline{
+    display:flex;
+    
+}
+.down .secondline{
+    display:flex;
+    align-self: center
+    
+}
+aside{
+    margin-top:70px;
+}
+aside .container{
+
+    display: flex;
+    justify-content: center;
+}
+
+aside .id{
+    position: relative;
+
+    display:flex;
+    justify-content: center;
+    
+    width:80%;
+    height: 500px;
+    background-color:#424949 ;
+    font-size: 5vh;
+
+    
+    border-style: none dashed solid dashed;
+    border-width: 8px;
+    border-radius: 15px;
+    border-color: whitesmoke;
+    
+    margin:5px;
+    
+    align-items: center;
+    
+    transition: 0.5s ease;
+}
+
+aside .overlay{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 5vh;
+    color: black;
+    background-color: #424949 ;
+    border:0px solid;
+    border-radius: 15px;    
+    position: absolute;
+    width:100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+
+}
+
+aside .overlay p{
+    font-family: 'Ubuntu';
+    align-self: center;
+    display:flex;
+    flex-wrap: wrap;
+    font-size: xx-large;
+    color:white;
+    text-align:center;
+    max-width:70%;
+    max-height: 70%;
+
+}
+aside .id img{
+
+    order:3;
+    position: relative;
+    right: 10px;
+    height:70%;
+    width:20%;
+    border:none;
+    border-color:#ddd;
+    border-radius:20px;
+    box-shadow:
+    1px 5px 10px black,     /* R and B*/
+    -1px -5px 10px black,     /* L and U*/
+    1px -5px 10px black,     /* R and U*/
+    -1px 5px 10px black;    /* L and B*/
+
+    
+}
+
+aside .id:hover .overlay{
+    opacity: 1;
+}
+aside .id:hover {
+    border:none;
+    box-shadow:
+    1px 5px 10px #424949,     /* R and B*/
+    -1px -5px 10px #424949,     /* L and U*/
+    1px -5px 10px #424949,     /* R and U*/
+    -1px 5px 10px #424949;    /* L and B*/
+
+}
+
+
+
+the html code
+ <section class="quote_image">
+        <div class="up">
+            <p class="quote">
+                some quotes goes here
+            </p>
+        </div>
+
+
+        <div class="down">
+
+            <div class="firstline">
+                <p>today is </p>
+                <p id='weekday'></p>
+                <p id='date'></p>
+            </div>
+            <div class='secondline'>
+                <p id='hour'>hour</p>
+                <p
+                    style="font-size: 50px; color:lightblue;background-color: transparent; mix-blend-mode: normal; font-family: unset;">
+                    : </p>
+                <p id='minutes'>minute</p>
+                <p
+                    style="font-size: 50px; color:lightblue;background-color: transparent; mix-blend-mode: normal; font-family: unset;">
+                    : </p>
+                <p id='second'>second</p>
+            </div>
+
+
+    </section>
+    <aside>
+        <div class='container'>
+            <div class="id">
+                <p>Little facts about me</p>
+                <div class='overlay'>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolorem odit accusamus
+                        expedita recusandae nulla impedit ipsa sint nesciunt laborum fugiat officiis necessitatibus
+                        vitae maiores quam labore id eum beatae?</p>
+                    <img src="nutila.jpg">
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+
+
+        /*box-shadow:
+    1px 5px 5px #424949,     /* R and B*/
+    -1px -5px 5px #424949,     /* L and U*/
+    1px -5px 5px #424949,     /* R and U*/
+    -1px 5px 5px #424949;    /* L and B*/
